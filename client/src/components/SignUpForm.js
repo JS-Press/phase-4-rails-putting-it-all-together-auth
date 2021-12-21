@@ -20,11 +20,13 @@ function SignUpForm({ onLogin }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        
         username,
         password,
         password_confirmation: passwordConfirmation,
         image_url: imageUrl,
-        bio,
+        bio
+      
       }),
     }).then((r) => {
       setIsLoading(false);
